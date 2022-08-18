@@ -1,2 +1,2 @@
-psycopg2
 scd30-i2c
+paho-mqtt
