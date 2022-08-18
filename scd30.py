@@ -22,9 +22,10 @@ while 1:
     if scd30.get_data_ready():
         m = scd30.read_measurement()
         if m is not None:
-            publish.single("scd30/raspberry",
-                           "{" + "'time':'{}','co2':'{}','temperature':'{}','humidity':'{}'".format(datetime.now(), m[0],
-                                                                                                m[1], m[2]) + "}",
+            publish.single('scd30/raspberry',
+                           '{' + '"time":"{}","co2":{},"temperature":{},"humidity":{}'.format(datetime.now(),
+                                                                                                    m[0], m[1],
+                                                                                                    m[2]) + '}',
                            hostname=mqtt_server,
                            port=8883,
                            tls={'ca_certs': "AmazonRootCA1.pem", 'certfile': "certificate.pem.crt",
