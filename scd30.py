@@ -28,8 +28,8 @@ while 1:
                                                                                                     m[2]) + '}',
                            hostname=mqtt_server,
                            port=8883,
-                           tls={'ca_certs': "AmazonRootCA1.pem", 'certfile': "certificate.pem.crt",
-                                'keyfile': "private.pem.key"})
+                           tls={'ca_certs': "data/AmazonRootCA1.pem", 'certfile': "data/certificate.pem.crt",
+                                'keyfile': "data/private.pem.key"})
         time.sleep(upload_interval)
     else:
         time.sleep(1)

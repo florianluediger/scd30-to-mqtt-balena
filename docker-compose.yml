@@ -8,6 +8,6 @@ services:
     restart: always
     network_mode: host
     volumes:
-      - scd30-data:/usr/src/app
+      - scd30-data:/usr/src/app/data
     devices:
       - "/dev/i2c-1:/dev/i2c-1"
